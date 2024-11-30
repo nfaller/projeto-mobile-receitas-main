@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_receitas"
+    android:backgroundTint="@color/dark_green"
+    android:backgroundTintMode="add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdicionarReceita">
+
+
+    <ImageButton
+        android:background="#00FFFFFF"
+        android:id="@+id/botao_logout3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_save"
+                    android:layout_width="170dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/input_beige" />
+
+                <Button
+                    android:id="@+id/image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="Escolher imagem" />
+
+                <EditText
+                    android:id="@+id/nome_receita"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/input_beige"
+                    android:baselineAligned="false"
+                    android:hint="Nome da receita"
+                    android:padding="5sp"
+                    android:paddingStart="17sp"
+                    android:paddingEnd="17sp"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="36dp"
+                    tools:layout_editor_absoluteY="255dp" />
+
+                <EditText
+                    android:id="@+id/descricao_receita"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/input_beige"
+                    android:gravity="top"
+                    android:hint="Descrição da receita"
+                    android:inputType="textMultiLine"
+                    android:maxLines="12"
+                    android:padding="5sp"
+                    android:paddingStart="17sp"
+                    android:paddingEnd="17sp"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="36dp"
+                    tools:layout_editor_absoluteY="302dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dificuldade:"
+                        android:textSize="15dp" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:numStars="5"
+                        android:progressBackgroundTint="@color/light_beige"
+                        android:progressTint="#BC6C25"
+                        android:rating="0"
+                        android:scaleX=".7"
+                        android:scaleY=".7"
+                        android:screenReaderFocusable="false"
+                        android:secondaryProgressTint="@color/gray"
+                        android:transformPivotX="0dp"
+                        android:transformPivotY="0dp"
+                        android:visibility="visible"></RatingBar>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INGREDIENTES"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="51dp"
+                    tools:layout_editor_absoluteY="474dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:dividerColor="@color/dark_green"
+                    app:dividerThickness="3dp" />
+
+                <LinearLayout
+                    android:id="@+id/ingredientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/input_beige"
+                        android:hint="Adicionar ingrediente..."
+                        android:padding="5sp"
+                        android:paddingStart="17sp"
+                        android:paddingEnd="17sp"
+                        android:textSize="15dp"
+                        tools:layout_editor_absoluteX="36dp"
+                        tools:layout_editor_absoluteY="255dp" />
+
+                    <Button
+                        android:id="@+id/add_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/round_button"
+                        android:drawableLeft="@drawable/baseline_add_24"
+                        android:padding="8.5dp"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MODO DE PREPARO"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="51dp"
+                    tools:layout_editor_absoluteY="564dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:dividerColor="@color/dark_green"
+                    app:dividerThickness="3dp" />
+
+                <EditText
+                    android:id="@+id/modoDePreparo"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/input_beige"
+                    android:gravity="top"
+                    android:hint="Modo de preparo"
+                    android:inputType="textMultiLine"
+                    android:maxLines="12"
+                    android:padding="5sp"
+                    android:paddingStart="17sp"
+                    android:paddingEnd="17sp"
+                    android:textSize="15dp"
+                    tools:layout_editor_absoluteX="36dp"
+                    tools:layout_editor_absoluteY="302dp" />
+
+                <Button
+                    android:id="@+id/add_receita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:width="200dp"
+                    android:height="55dp"
+                    android:text="Adicionar"
+                    android:textSize="16dp">
+
+                </Button>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="114dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="35dp"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_receitas_icon" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

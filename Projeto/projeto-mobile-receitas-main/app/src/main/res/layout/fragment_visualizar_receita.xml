@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_receitas"
+    android:backgroundTint="@color/dark_green"
+    android:backgroundTintMode="add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VisualizarReceita">
+
+
+    <ImageButton
+        android:background="#00FFFFFF"
+        android:id="@+id/botao_logout2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="-161dp"
+            tools:layout_editor_absoluteY="-40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-131dp"
+                tools:layout_editor_absoluteY="-40dp">
+
+                <ImageView
+                    android:id="@+id/imagemReceitaImageView"
+                    android:layout_width="288dp"
+                    android:layout_height="238dp"
+                    android:layout_gravity="center_horizontal"
+                    tools:layout_editor_absoluteX="-99dp"
+                    tools:layout_editor_absoluteY="-40dp" />
+
+                <TextView
+                    android:id="@+id/nomeReceitaTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="26dp" />
+
+                <RatingBar
+                    android:id="@+id/receitaRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    android:scaleX=".7"
+                    android:scaleY=".7"
+                    android:layout_marginStart="32dp"
+                    android:numStars="5"
+                    android:progressTint="#BC6C25"
+                    android:secondaryProgressTint="@color/gray"
+                    android:isIndicator="true">
+                </RatingBar>
+
+                <TextView
+                    android:id="@+id/descricaoReceitaTextView"
+                    android:layout_width="288dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="20dp"
+                    android:justificationMode="inter_word"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INGREDIENTES"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="51dp"
+                    tools:layout_editor_absoluteY="474dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:dividerColor="@color/dark_green"
+                    app:dividerThickness="3dp" />
+
+                <TextView
+                    android:id="@+id/ingredientesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MODO DE PREPARO"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="51dp"
+                    tools:layout_editor_absoluteY="564dp" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:dividerColor="@color/dark_green"
+                    app:dividerThickness="3dp" />
+
+                <TextView
+                    android:id="@+id/modoDePreparoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:justificationMode="inter_word"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus ornare turpis, id ornare lacus eleifend eget. Duis condimentum sed enim et tristique. Fusce viverra scelerisque purus, at ultricies ante fringilla non. "
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="114dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="35dp"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_receitas_icon" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
