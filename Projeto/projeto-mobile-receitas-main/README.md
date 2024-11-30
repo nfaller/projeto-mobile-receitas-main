@@ -1,13 +1,10 @@
-# Projeto Desenvolvimento Mobile
+Participantes: Nicolas Rios Faller e Joyce Costa
 
-Integrantes do grupo: Danielle Werutsky, Matthäus Campanher Albrecht, Vinícius Peixoto e Vitória Pilger
+Instruções de Configuração e Utilização:
 
-Instruções:
-- Ao abrir o projeto, mudar o tipo de visualização de "Android" para "Projeto".
-- Acessar o arquivo google-services.json, que está na pasta app.
-- No campo "api-key", colar o código enviado pelo LEX entre as chaves.
-- Clicar em "Cadastre-se" para criar uma nova conta.
-- A senha deve ter no mínimo 6 caracteres.
-- Para criar uma nova receita, todos os campos devem estar preenchidos.
-- Como a galeria do emulador está vazia, pode ser feito um print de tela para colocar como imagem.
-
+Ao abrir o projeto no Android Studio, mude a exibição para "Projeto" no painel lateral.
+Localize o arquivo google-services.json na pasta app e substitua o valor do campo "api-key" pelo código fornecido pelo LEX.
+Para criar um novo usuário, clique no botão "Cadastre-se" e siga as instruções.
+Lembre-se: a senha deve conter pelo menos 6 caracteres para ser válida.
+Ao registrar uma nova receita, todos os campos obrigatórios precisam ser preenchidos.
+Caso precise adicionar uma imagem e a galeria do emulador esteja vazia, você pode capturar a tela e usá-la como imagem da receita.
